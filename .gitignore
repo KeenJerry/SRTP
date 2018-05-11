@@ -1,0 +1,6 @@
+.DS_Store
+Library/
+.vs/
+UnityPackageManager/
+*.sln
+*.csproj
