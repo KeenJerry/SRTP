@@ -34,14 +34,28 @@ public class MissileLauncher : MonoBehaviour {
                 NextFireL = Time.time + FireRate;
 
                 GameObject missileL = GameObject.Instantiate(MissileL, transform.position + -transform.forward * 2.5f + -transform.up * 1, Quaternion.identity, transform.parent);
-
+                if (GetComponentInParent<AISystem>())
+                {
+                    missileL.GetComponent<BulletMissile>().SetTarget(GetComponentInParent<AISystem>().Target);
+                }
+                else
+                {
+                    missileL.GetComponent<BulletMissile>().SetTarget(GetComponentInParent<PlayerController>().Target);
+                }
             }
             else if (Time.time > NextFireR && Time.time <= NextFireL)
             {
                 NextFireR = Time.time + FireRate;
 
                 GameObject missileR = GameObject.Instantiate(MissileL, transform.position + transform.forward * 2.5f + -transform.up * 1, Quaternion.identity, transform.parent);
-
+                if (GetComponentInParent<AISystem>())
+                {
+                    missileR.GetComponent<BulletMissile>().SetTarget(GetComponentInParent<AISystem>().Target);
+                }
+                else
+                {
+                    missileR.GetComponent<BulletMissile>().SetTarget(GetComponentInParent<PlayerController>().Target);
+                }
             }
         //}
         

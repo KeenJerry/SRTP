@@ -13,6 +13,7 @@ public class FlightSystem : MonoBehaviour {
     public float SpeedPitch = 10.0f;
     public float SpeedRoll = 3.0f;
     public float SpeedYaw = 2.0f;
+    public int HP = 100;
 
     public float ForwardSpeed = 40.0f;
     // public Vector3 LiftForce = Vector3.zero;
@@ -26,6 +27,8 @@ public class FlightSystem : MonoBehaviour {
     public Rigidbody rigid;
     public MiniGunLauncher miniGunLauncher;
     public MissileLauncher missileLauncher;
+    public GameObject OnHitEffect;
+    public GameObject OnHitSpark;
     
 
 	// Use this for initialization

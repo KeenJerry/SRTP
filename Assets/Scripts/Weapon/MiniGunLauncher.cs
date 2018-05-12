@@ -26,6 +26,15 @@ public class MiniGunLauncher : MonoBehaviour {
         {
             NextFire = Time.time + FireRate;
             GameObject bullet = GameObject.Instantiate(Bullet, transform.position, Quaternion.identity, transform.parent);
+            if (GetComponentInParent<AISystem>())
+            {
+                bullet.GetComponent<BulletNormal>().SetTarget(GetComponentInParent<AISystem>().Target);
+            }
+            else
+            {
+                bullet.GetComponent<BulletNormal>().SetTarget(GetComponentInParent<PlayerController>().Target);
+            }
+            
         }
         
     }

@@ -488,7 +488,7 @@ Transform:
   m_LocalScale: {x: 0.96349716, y: 0.96349716, z: 0.96349716}
   m_Children: []
   m_Father: {fileID: 1493440672}
-  m_RootOrder: 16
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!199 &572520653
 ParticleSystemRenderer:
@@ -604,7 +604,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -909418161
+  randomSeed: -1100961360
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4049,7 +4049,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1520835951
+  randomSeed: 763709903
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7359,7 +7359,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400024, guid: 2cf3d8882e27bd248805f5b49885a392, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 530
+      value: 515
       objectReference: {fileID: 0}
     - target: {fileID: 400024, guid: 2cf3d8882e27bd248805f5b49885a392, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7367,7 +7367,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400024, guid: 2cf3d8882e27bd248805f5b49885a392, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -99.4
+      value: -61
       objectReference: {fileID: 0}
     - target: {fileID: 400024, guid: 2cf3d8882e27bd248805f5b49885a392, type: 3}
       propertyPath: m_LocalRotation.x
@@ -7395,11 +7395,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: 2cf3d8882e27bd248805f5b49885a392, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 2cf3d8882e27bd248805f5b49885a392, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2cf3d8882e27bd248805f5b49885a392, type: 3}
       propertyPath: m_RootOrder
@@ -7407,7 +7407,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400028, guid: 2cf3d8882e27bd248805f5b49885a392, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 2cf3d8882e27bd248805f5b49885a392, type: 3}
       propertyPath: m_RootOrder
@@ -7439,11 +7439,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: 2cf3d8882e27bd248805f5b49885a392, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: 2cf3d8882e27bd248805f5b49885a392, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 100024, guid: 2cf3d8882e27bd248805f5b49885a392, type: 3}
       propertyPath: m_TagString
@@ -7616,7 +7616,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 912404626}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 509, y: 155.5475, z: 88.07873}
+  m_LocalPosition: {x: 509, y: 155.5475, z: -604}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7957,10 +7957,11 @@ MonoBehaviour:
   TimeToSelectTarget: 0
   AttackRate: 0
   WeaponSelected: 0
-  BattleCenter: {x: 0, y: 0, z: 0}
+  BattleCenter: {fileID: 0}
   selfState: 0
   targetState: 0
   flight: {fileID: 0}
+  rigid: {fileID: 0}
 --- !u!114 &1493440674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8046,7 +8047,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1493440672}
-  m_RootOrder: 14
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1626008295
 MonoBehaviour:
@@ -8239,7 +8240,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1493440672}
-  m_RootOrder: 15
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1863394222
 MonoBehaviour:

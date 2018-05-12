@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour {
     public float Roll;
     public float Yaw;
     public float Throttle;
+    public GameObject Target;
 
 	void Start () {
         Pitch = 0.0f;
@@ -21,6 +22,10 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (!Target)
+        {
+            FindTarget();
+        }
         Pitch = Input.GetAxis("Pitch");
         Roll = Input.GetAxis("Roll");
         Throttle = Input.GetAxis("Throttle"); 
@@ -31,4 +36,11 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space)) plane.LaunchMissile();
         
 	}
+
+    void FindTarget()
+    {
+        List<GameObject> targets = new List<GameObject>(GameObject.FindGameObjectsWithTag("AIEnemy"));
+        Target = targets[(int)Random.Range(0, targets.Count)];
+        //GameObject.Find
+    }
 }
