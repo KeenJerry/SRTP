@@ -34,7 +34,7 @@ public class BulletNormal : MonoBehaviour {
             {
                 //Ray ray = new Ray(transform.position, transform.forward);
                 //RaycastHit hitInfo;
-                if (Vector3.Distance(Target.transform.position, this.transform.position) < 1)
+                if (Vector3.Distance(Target.transform.position, this.transform.position) < 2)
                 {
                     //isCatch = true;
                     DoDamage(Target);

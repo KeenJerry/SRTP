@@ -22,7 +22,7 @@ public class BulletMissile : MonoBehaviour {
         Rigid.velocity = Owner.GetComponent<Rigidbody>().velocity * 5;
         TimeStart = Time.time;
         //Debug.Log(TimeStart);
-        LifeTime = 20.0f;
+        LifeTime = 10.0f;
     }
 	
 	// Update is called once per frame

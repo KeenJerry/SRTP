@@ -320,6 +320,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Target: {fileID: 0}
   Rigid: {fileID: 0}
+  Damage: 0
   TimeStart: 0
 --- !u!114 &114449201191727306
 MonoBehaviour:
@@ -332,6 +333,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497e597b5b93d2f4b9f0d86a246daf21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missile: {fileID: 0}
+  TargetPosition: {x: 0, y: 0, z: 0}
+  mainRot: {x: 0, y: 0, z: 0, w: 0}
+  rigid: {fileID: 0}
 --- !u!122 &122777249704914020
 Halo:
   m_ObjectHideFlags: 1
@@ -963,7 +968,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 500
+      scalar: 100
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1321,7 +1326,7 @@ ParticleSystem:
         ctime5: 0
         ctime6: 0
         ctime7: 0
-        atime0: 33539
+        atime0: 4626
         atime1: 65535
         atime2: 0
         atime3: 0

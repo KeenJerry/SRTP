@@ -9,8 +9,9 @@ public class Mark : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        InCamera = GameObject.FindGameObjectWithTag("PlayerInCamera");
-        BackCamera = GameObject.FindGameObjectWithTag("PlayerBackCamera");
+        
+        //BackCamera = GameObject.FindGameObjectWithTag("PlayerBackCamera");
+        //InCamera = GameObject.FindGameObjectWithTag("PlayerInCamera");
     }
 	
 	// Update is called once per frame

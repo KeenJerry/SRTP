@@ -46,7 +46,7 @@ public class AISystem : MonoBehaviour {
     void Start () {
         mainRot = Quaternion.identity;
         DistanceLock = 10000000;
-        LimitedDistance = 100000.0f;
+        LimitedDistance = 1000.0f;
         BattleCenter = GameObject.FindGameObjectWithTag("BattleCenter");
         VersionSight = 0.2f;
         //TimeToSelectTarget = 2.0f;
@@ -175,7 +175,12 @@ public class AISystem : MonoBehaviour {
 
         mainRot = Quaternion.LookRotation(-Vector3.Cross((target.transform.position - this.transform.position).normalized, this.transform.up));
         Vector3 relativePoint = this.transform.InverseTransformPoint(TargetPosition).normalized;
-        rigid.rotation = Quaternion.Lerp(rigid.rotation, mainRot, rotateMult * 0.1f * 8.0f * Time.deltaTime);
+        //Quaternion noise = new Quaternion(Random.Range(-1.5f, 1.5f), Random.Range(-1.5f, 1.5f), Random.Range(-1.5f, 1.5f), Random.Range(-1.5f, 1.5f));
+        mainRot.x += Random.Range(-0.3f, 0.3f);
+        mainRot.y += Random.Range(-0.3f, 0.3f);
+        mainRot.z += Random.Range(-0.3f, 0.3f);
+        mainRot.w += Random.Range(-0.3f, 0.3f);
+        rigid.rotation = Quaternion.Lerp(rigid.rotation, mainRot , rotateMult * 0.1f * 8.0f * Time.deltaTime);
         rigid.rotation *= Quaternion.Euler(0, 0, target.transform.rotation.z * 5000 * 0.01f * Time.deltaTime);
         //rigid.rotation = mainRot;
     }
